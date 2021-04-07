@@ -2,10 +2,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/button-has-type */
 /* eslint-disable arrow-body-style */
-import React, { useEffect, useRef, useState } from 'react';
+// import { Link } from 'react-router';
+import React, {
+  useEffect, useRef, useState, Link,
+} from 'react';
 import { FaBars } from 'react-icons/fa';
 import logo from '../assets/logo.png';
-import { navLinks, socialLinks } from '../data/linksSocial';
+import { navLinks, socialLinks } from '../data/data';
 
 const NavBar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -24,18 +27,17 @@ const NavBar = () => {
   }, [showLinks]);
   return (
     <nav>
-      <div className="nav-center">
-        <div className="nav-header">
-          <Link to="/">
-            <img src={logo} alt="logo" style={{ height: '80px', width: '80px' }} />
-
-          </Link>
-          <button className="nav-toggle" onClick={toggleLinks}>
+      <div className='nav-center'>
+        <div className='nav-header'>
+          {/* <Link to="/"> */}
+          <img src={logo} alt='logo' style={{ height: '80px', width: '80px' }} />
+          {/* </Link> */}
+          <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
           </button>
         </div>
-        <div className="links-container" ref={linksContainerRef}>
-          <ul className="links" ref={linksRef}>
+        <div className='links-container' ref={linksContainerRef}>
+          <ul className='links' ref={linksRef}>
             {navLinks.map((link) => {
               const { id, name, url } = link;
               return (
@@ -46,7 +48,7 @@ const NavBar = () => {
             })}
           </ul>
         </div>
-        <ul className="social-icons">
+        <ul className='social-icons'>
           {socialLinks.map((iconSocial) => {
             const { id, icon, url } = iconSocial;
             return (

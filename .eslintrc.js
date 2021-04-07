@@ -20,5 +20,7 @@ module.exports = {
   ],
   rules: {
     quotes: [2, 'single', { avoidEscape: true }],
+    'arrow-body-style': ['error', 'always'],
+    'jsx-quotes': [2, 'prefer-single'],
   },
 };
