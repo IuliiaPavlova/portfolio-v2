@@ -46,7 +46,7 @@ export const navLinks = [
   },
 ];
 
-export const projects = [
+export const projectsData = [
   {
     id: 1,
     name: 'Bloodworks',
@@ -87,5 +87,4 @@ export const projects = [
     },
     description: 'DrivelTv is a web-app lets users start an online stream (broadcast) using their YouTube playlists.',
   },
-
 ];

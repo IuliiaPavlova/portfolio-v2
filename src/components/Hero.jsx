@@ -1,10 +1,11 @@
 import React from 'react';
 import { socialLinks } from '../data/data';
 import photo from '../assets/hero-img.png';
+// import Slider from './Slider';
 
 const Hero = () => {
   return (
-    <main>
+    <section className='main'>
       <article className='main-bio'>
         <h1>Hi, I&apos;m Iuliia</h1>
         <h4>
@@ -28,7 +29,8 @@ const Hero = () => {
         </ul>
       </article>
       <img src={photo} alt='Me' className='main-photo' />
-    </main>
+      {/* <Slider projectsArr={projectsData} /> */}
+    </section>
   );
 };
 
