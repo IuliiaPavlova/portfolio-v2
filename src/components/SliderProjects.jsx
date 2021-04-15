@@ -1,11 +1,12 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
-import { FaArrowCircleLeft, FaArrowCircleRight, FaPeopleCarry } from 'react-icons/fa';
+import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import { projectsData } from '../data/data';
 
 const SliderProjects = () => {
   const [index, setIndex] = useState(0);
   const {
-    id, name, github, deployed, image, description,
+    name, github, deployed, image, description,
   } = projectsData[index];
 
   const checkNumber = (number) => {
@@ -17,13 +18,53 @@ const SliderProjects = () => {
     }
     return number;
   };
+  const prevProject = () => {
+    setIndex((currentIndex) => {
+      const newIndex = currentIndex - 1;
+      return checkNumber(newIndex);
+    });
+  };
+
+  const nextProject = () => {
+    setIndex((currentIndex) => {
+      const newIndex = currentIndex + 1;
+      return checkNumber(newIndex);
+    });
+  };
 
   return (
-    <section className='slider'>
+    <section className='slider-main'>
       <h2>PROJECTS</h2>
-      <FaArrowCircleLeft className='next-arrow' onClick={prevProject} />
-      <FaArrowCircleRight className='prev-arrow' onClick={nextProject} />
+      <article className='slider'>
+        <FaArrowCircleLeft className='icon next-arrow' onClick={prevProject} />
+        <div className='project'>
+          <div className='project-img'>
+            {image}
+          </div>
+          <div className='project-description'>
+            <h4>{name}</h4>
+            <p>{description}</p>
+            <div className='project-links'>
+              <a href={github.url}>
+                {github.icon}
+              </a>
+              <a href={deployed.url}>
+                {deployed.icon}
+              </a>
+            </div>
+          </div>
+        </div>
+        <FaArrowCircleRight className='icon prev-arrow' onClick={nextProject} />
 
+      </article>
+      {/* <button type='button' className='next-arrow' onClick={prevProject}> */}
+
+      {/* <FaArrowCircleLeft className='icon next-arrow' onClick={prevProject} /> */}
+      {/* </button> */}
+      {/* <button type='button' className='prev-arrow icon' onClick={nextProject} className='icon' > */}
+
+      {/* <FaArrowCircleRight className='icon prev-arrow' onClick={nextProject} /> */}
+      {/* </button> */}
     </section>
   );
 };

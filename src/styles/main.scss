@@ -1,6 +1,7 @@
 @import './navBar.scss';
 @import './hero.scss';
-@import './slider.scss';
+// @import './slider.scss';
+@import './sliderProjects.scss';
 
 :root {
   --transition: all 0.3s linear;
@@ -98,7 +99,10 @@ p {
   margin: 0 auto;
   max-width: var(--max-width);
 }
-
+.icon {
+  padding: 0;
+  margin: 0 0.5rem;
+}
 @media screen and (min-width: 992px) {
   .section {
     width: 95vw;

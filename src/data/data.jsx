@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import {
   SiLinkedin,
@@ -5,6 +6,8 @@ import {
   SiFacebook,
   SiSkyliner,
 } from 'react-icons/si';
+import Bloodworks from '../assets/Bloodworks1.png';
+import TfN from '../assets/TfN.png';
 
 export const socialLinks = [
   {
@@ -58,7 +61,7 @@ export const projectsData = [
       icon: <SiSkyliner className='icon' />,
       url: '',
     },
-    image: '',
+    image: <img src={Bloodworks} alt='project screenshot' className='project-screenshot' />,
     description: 'Bloodworks is a tool that takes patients data such as blood pressure or blood tests and uses data visualization to display the data in understandable and easy way.',
   },
   {
@@ -72,19 +75,20 @@ export const projectsData = [
       icon: <SiSkyliner className='icon' />,
       url: '',
     },
+    image: <img src={TfN} alt='project screenshot' className='project-screenshot' />,
     description: 'Toronto for Newcomers is a website that gives useful information for newcomers about Toronto\'s neighborhoods.',
   },
-  {
-    id: 3,
-    name: 'DrivelTV',
-    github: {
-      icon: <SiGithub className='icon' />,
-      url: '',
-    },
-    deployed: {
-      icon: <SiSkyliner className='icon' />,
-      url: '',
-    },
-    description: 'DrivelTv is a web-app lets users start an online stream (broadcast) using their YouTube playlists.',
-  },
+  // {
+  //   id: 3,
+  //   name: 'DrivelTV',
+  //   github: {
+  //     icon: <SiGithub className='icon' />,
+  //     url: '',
+  //   },
+  //   deployed: {
+  //     icon: <SiSkyliner className='icon' />,
+  //     url: '',
+  //   },
+  //   description: 'DrivelTv is a web-app lets users start an online stream (broadcast) using their YouTube playlists.',
+  // },
 ];
