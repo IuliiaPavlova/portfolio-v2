@@ -8,6 +8,7 @@ import {
 } from 'react-icons/si';
 import Bloodworks from '../assets/Bloodworks1.png';
 import TfN from '../assets/TfN.png';
+import Employees from '../assets/employees.png';
 
 export const socialLinks = [
   {
@@ -69,11 +70,11 @@ export const projectsData = [
     name: 'Toronto for Newcomers',
     github: {
       icon: <SiGithub className='icon' />,
-      url: '',
+      url: 'https://github.com/IuliiaPavlova/toronto-for-newcomers',
     },
     deployed: {
       icon: <SiSkyliner className='icon' />,
-      url: '',
+      url: 'https://toronto-for-newcomers.vercel.app/',
     },
     image: <img src={TfN} alt='project screenshot' className='project-screenshot' />,
     description: 'Toronto for Newcomers is a website that gives useful information for newcomers about Toronto\'s neighborhoods.',
@@ -91,4 +92,18 @@ export const projectsData = [
   //   },
   //   description: 'DrivelTv is a web-app lets users start an online stream (broadcast) using their YouTube playlists.',
   // },
+  {
+    id: 3,
+    name: 'Employees App',
+    github: {
+      icon: <SiGithub className='icon' />,
+      url: 'https://github.com/IuliiaPavlova/employess-app',
+    },
+    deployed: {
+      icon: <SiSkyliner className='icon' />,
+      url: 'https://employees-app-technichal-assignment.netlify.app/',
+    },
+    image: <img src={Employees} alt='project screenshot' className='project-screenshot' />,
+    description: 'A client-side SPA (single-page app) built with Create React App that fetches data about employees and displays in the table',
+  },
 ];
