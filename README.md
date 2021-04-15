@@ -1,2 +1,2 @@
 # Deployed
-https://iuliia-pavlova.netlify.app/
+iuliiapavlova.codes
