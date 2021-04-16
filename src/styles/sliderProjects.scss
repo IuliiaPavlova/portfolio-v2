@@ -29,6 +29,10 @@
   height: auto;
   padding: 2rem;
 }
+.project-img :hover {
+  width: 25rem;
+  height: auto;
+}
 .prev-arrow {
   font-size: 70px;
   margin: 10px;
@@ -69,8 +73,20 @@
     height: auto;
     padding: 2rem;
   }
+  .project-img :hover {
+    width: 50rem;
+    height: auto;
+  }
   .project {
     flex-direction: row;
     width: 80vw;
+    height: 50vh;
+  }
+  .project-description {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
