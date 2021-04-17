@@ -3,7 +3,8 @@ import React from 'react';
 import {
   SiLinkedin,
   SiGithub,
-  SiFacebook,
+  // SiFacebook,
+  SiMinutemailer,
   SiSkyliner,
 } from 'react-icons/si';
 import Bloodworks from '../assets/Bloodworks1.png';
@@ -23,8 +24,8 @@ export const socialLinks = [
   },
   {
     id: 3,
-    icon: <SiFacebook className='icon' />,
-    url: 'https://www.facebook.com/iuliia.pavlova.2902/',
+    icon: <SiMinutemailer className='icon' />,
+    url: 'iuliia.a.pavlova@gmail.com',
   },
 ];
 export const navLinks = [
