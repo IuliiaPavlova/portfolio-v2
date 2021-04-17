@@ -30,7 +30,7 @@ const NavBar = () => {
       <div className='nav-center'>
         <div className='nav-header'>
           {/* <Link to="/"> */}
-          <img src={logo} alt='logo' style={{ height: '80px', width: '80px' }} />
+          <img src={logo} alt='logo' style={{ height: '100px', width: '100px' }} />
           {/* </Link> */}
           <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />

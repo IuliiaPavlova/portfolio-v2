@@ -34,7 +34,7 @@ const SliderProjects = () => {
 
   return (
     <section className='slider-main'>
-      <h2>PROJECTS</h2>
+      <h1>PROJECTS</h1>
       <article className='slider'>
         <FaArrowCircleLeft className='icon next-arrow' onClick={prevProject} />
         <div className='project'>
@@ -42,7 +42,7 @@ const SliderProjects = () => {
             {image}
           </div>
           <div className='project-description'>
-            <h4>{name}</h4>
+            <h2>{name}</h2>
             <p>{description}</p>
             <div className='project-links'>
               <a href={github.url}>

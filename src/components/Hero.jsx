@@ -7,14 +7,19 @@ const Hero = () => {
   return (
     <section className='main'>
       <article className='main-bio'>
-        <h1>Hi, I&apos;m Iuliia</h1>
-        <h4>
-          Full-Stack Developer with a strong knowledge of JavaScript,
-          data structures and algorithms, front-end (React, Angular),
+        <h1>Hi, I&apos;m Iuliia!</h1>
+        <br />
+        <p>
+          Full-Stack Developer with strong knowledge of JavaScript,
+          data structures and algorithms front-end (React, Angular),
           and Back-end (Node.js, Express, and Koa) libraries.
+        </p>
+        <br />
+        <p>
           Experienced working on dynamic projects in an Agile environment.
+          <br />
           Formerly trained as a lawyer with strong logic and problem-solving skills.
-        </h4>
+        </p>
         <ul className='social-icons'>
           {socialLinks.map((iconSocial) => {
             const { id, icon, url } = iconSocial;
