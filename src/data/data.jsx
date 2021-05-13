@@ -37,17 +37,17 @@ export const navLinks = [
   {
     id: 2,
     name: 'about',
-    url: '/about/',
+    url: '#about',
   },
   {
     id: 3,
     name: 'resume',
-    url: '/resume/',
+    url: '../assets/CV.pdf',
   },
   {
     id: 4,
     name: 'projects',
-    url: '/projects/',
+    url: '#projects',
   },
 ];
 

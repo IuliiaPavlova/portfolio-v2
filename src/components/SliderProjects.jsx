@@ -33,7 +33,7 @@ const SliderProjects = () => {
   };
 
   return (
-    <section className='slider-main'>
+    <section className='slider-main' id='projects'>
       <h1>PROJECTS</h1>
       <article className='slider'>
         <FaArrowCircleLeft className='icon next-arrow' onClick={prevProject} />

@@ -7,7 +7,7 @@ import React, {
   useEffect, useRef, useState, Link,
 } from 'react';
 import { FaBars } from 'react-icons/fa';
-import logo from '../assets/logo.png';
+// import logo from '../assets/logo.png';
 import { navLinks, socialLinks } from '../data/data';
 
 const NavBar = () => {
@@ -30,7 +30,7 @@ const NavBar = () => {
       <div className='nav-center'>
         <div className='nav-header'>
           {/* <Link to="/"> */}
-          <img src={logo} alt='logo' style={{ height: '100px', width: '100px' }} />
+          {/* <img src={logo} alt='logo' style={{ height: '100px', width: '100px' }} /> */}
           {/* </Link> */}
           <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
