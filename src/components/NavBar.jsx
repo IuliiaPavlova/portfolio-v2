@@ -9,6 +9,7 @@ import React, {
 import { FaBars } from 'react-icons/fa';
 // import logo from '../assets/logo.png';
 import { navLinks, socialLinks } from '../data/data';
+import CV from '../assets/CV.pdf';
 
 const NavBar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -29,9 +30,6 @@ const NavBar = () => {
     <nav>
       <div className='nav-center'>
         <div className='nav-header'>
-          {/* <Link to="/"> */}
-          {/* <img src={logo} alt='logo' style={{ height: '100px', width: '100px' }} /> */}
-          {/* </Link> */}
           <button className='nav-toggle' onClick={toggleLinks}>
             <FaBars />
           </button>
@@ -42,7 +40,17 @@ const NavBar = () => {
               const { id, name, url } = link;
               return (
                 <li key={id}>
-                  <a href={url}>{name}</a>
+                  {
+                  id === 3 ? (
+                    <a href={CV} download='CV.pdf'>
+                      {name}
+                    </a>
+                  ) : (
+                    <a href={url}>
+                      {name}
+                    </a>
+                  )
+                }
                 </li>
               );
             })}

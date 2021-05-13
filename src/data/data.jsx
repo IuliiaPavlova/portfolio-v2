@@ -42,7 +42,7 @@ export const navLinks = [
   {
     id: 3,
     name: 'resume',
-    url: '../assets/CV.pdf',
+    url: '',
   },
   {
     id: 4,
