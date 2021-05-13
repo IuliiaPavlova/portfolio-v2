@@ -5,7 +5,7 @@ import photo from '../assets/hero-img.png';
 
 const Hero = () => {
   return (
-    <section className='main'>
+    <section className='main' id='about'>
       <article className='main-bio'>
         <h1>Hi, I&apos;m Iuliia!</h1>
         <br />
