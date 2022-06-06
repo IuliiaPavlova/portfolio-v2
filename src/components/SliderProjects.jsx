@@ -6,7 +6,7 @@ import { projectsData } from '../data/data';
 const SliderProjects = () => {
   const [index, setIndex] = useState(0);
   const {
-    name, github, deployed, image, description,
+    id, name, github, deployed, image, description,
   } = projectsData[index];
 
   const checkNumber = (number) => {
@@ -35,6 +35,13 @@ const SliderProjects = () => {
   return (
     <section className='slider-main' id='projects'>
       <h1>PROJECTS</h1>
+      <h4>
+        {id}
+        {' '}
+        of
+        {' '}
+        {projectsData.length}
+      </h4>
       <article className='slider'>
         <FaArrowCircleLeft className='icon next-arrow' onClick={prevProject} />
         <div className='project'>
@@ -45,12 +52,20 @@ const SliderProjects = () => {
             <h2>{name}</h2>
             <p>{description}</p>
             <div className='project-links'>
+              {
+              github.url && (
               <a href={github.url}>
                 {github.icon}
               </a>
-              <a href={deployed.url}>
-                {deployed.icon}
-              </a>
+              )
+            }
+              {
+                deployed.url && (
+                <a href={deployed.url}>
+                  {deployed.icon}
+                </a>
+                )
+              }
             </div>
           </div>
         </div>
