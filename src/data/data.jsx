@@ -10,6 +10,7 @@ import {
 import Bloodworks from '../assets/Bloodworks1.png';
 import TfN from '../assets/TfN.png';
 import Employees from '../assets/employees.png';
+import DanceParty from '../assets/dancepartyscreenshot.png';
 
 export const socialLinks = [
   {
@@ -106,5 +107,19 @@ export const projectsData = [
     },
     image: <img src={Employees} alt='project screenshot' className='project-screenshot' />,
     description: 'A client-side SPA (single-page app) built with Create React App that fetches data about employees and displays in the table',
+  },
+  {
+    id: 4,
+    name: 'Sub Class Dance Party',
+    github: {
+      icon: <SiGithub className='icon' />,
+      url: 'https://github.com/IuliiaPavlova/sub-class-dance-party',
+    },
+    deployed: {
+      icon: <SiSkyliner className='icon' />,
+      url: '',
+    },
+    image: <img src={DanceParty} alt='project screenshot' className='project-screenshot' />,
+    description: 'Fun small jQuery project with classes. Dance party',
   },
 ];
