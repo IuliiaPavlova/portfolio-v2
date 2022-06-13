@@ -1,29 +1,23 @@
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/button-has-type */
-/* eslint-disable arrow-body-style */
-// import { Link } from 'react-router';
-import React, {
-  useEffect, useRef, useState, Link,
-} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-// import logo from '../assets/logo.png';
 import { navLinks, socialLinks } from '../data/data';
 import CV from '../assets/CV.pdf';
 
 const NavBar = () => {
   const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
+  const linksContainerRef = useRef<HTMLHeadingElement>(null);
+  const linksRef = useRef<HTMLDivElement>(null);
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   };
   useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = '0px';
+    if (linksRef.current && linksContainerRef.current) {
+      const linksHeight = linksRef.current.getBoundingClientRect().height;
+      if (showLinks) {
+        linksContainerRef.current.style.height = `${linksHeight}px`;
+      } else {
+        linksContainerRef.current.style.height = '0px';
+      }
     }
   }, [showLinks]);
   return (
@@ -40,17 +34,13 @@ const NavBar = () => {
               const { id, name, url } = link;
               return (
                 <li key={id}>
-                  {
-                  id === 3 ? (
+                  {id === 3 ? (
                     <a href={CV} download='CV.pdf'>
                       {name}
                     </a>
                   ) : (
-                    <a href={url}>
-                      {name}
-                    </a>
-                  )
-                }
+                    <a href={url}>{name}</a>
+                  )}
                 </li>
               );
             })}
@@ -61,9 +51,7 @@ const NavBar = () => {
             const { id, icon, url } = iconSocial;
             return (
               <li key={id}>
-                <a href={url}>
-                  {icon}
-                </a>
+                <a href={url}>{icon}</a>
               </li>
             );
           })}

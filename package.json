@@ -21,7 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "commit": "cz"
+    "commit": "cz",
+    "lint": "tsc --noEmit && eslint -c ./.eslintrc.js  \"**/*.ts{,x}\" --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +44,8 @@
   },
   "devDependencies": {
     "@testing-library/react": "^13.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",

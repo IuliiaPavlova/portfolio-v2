@@ -1,23 +1,16 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
+  root: true,
   extends: [
-    'plugin:react/recommended',
     'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
+  plugins: ['import', 'prettier'],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: 'module',
+    project: './tsconfig.eslint.json',
   },
-  plugins: [
-    'react',
-  ],
   rules: {
     quotes: [2, 'single', { avoidEscape: true }],
     'arrow-body-style': ['error', 'always'],

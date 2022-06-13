@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import SliderProjects from './components/SliderProjects';
 // import TechStack from './components/TechStack';
 
-function App() {
+const App = () => {
   return (
     <div id='shell'>
       <NavBar />
@@ -14,6 +14,6 @@ function App() {
       <SliderProjects />
     </div>
   );
-}
+};
 
 export default App;
